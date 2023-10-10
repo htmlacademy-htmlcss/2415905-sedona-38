@@ -302,14 +302,12 @@ text-align: center;
 }
 
 .subscribe-home  {
-  text-align: center;
   background-image: url(../images/subscribe.jpg);
   text-align: center;
   color: #ffffff;
   background-color: #93adb9;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
 .subscribe-home .subscribe-title, .subscribe-text {
