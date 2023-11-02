@@ -116,7 +116,7 @@
         <section class="search" data-test="search">
           <h2 class="search-title page-title">Заинтересовались?</h2>
           <p class="search-text page-text">Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <a class="search-button button" href="#">Поиск гостиницы в Седоне</a>
+          <a class="search-button button"  href="#openModal">Поиск гостиницы в Седоне</a>
         </section>
 
         <section class="subscribe subscribe-home" data-test="subscribe">
@@ -177,23 +177,54 @@
       </footer>
     </div>
 
-    <div class="modal-container">
+    <div class="modal-container" id="openModal">
       <div class="modal modal-auth">
         <button class="modal-close-button">
           <span class="visually-hidden">Закрыть</span>
         </button>
         <section class="modal-content">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-          <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
-            <p class="field-group">
-              <label class="visually-hidden" for="arrival-date">Дата заезда</label>
-              <input class="auth-form-field field" type="date" id="arrival-date" name="arrival-date" placeholder="27 апреля 2020" value="27 апреля 2020">
-            </p>
-            <p class="field-group">
-              <label class="visually-hidden" for="departure-date">Пароль</label>
-              <input class="auth-form-field field" type="date" id="departure-date" name="departure-date" placeholder="1 сентября 2023">
-            </p>
+          <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="modal-field-group">
+              <label class="modal-label" for="arrival-date">Дата Заезда:</label>
+              <input class="modal-form-field field" type="text" id="arrival-date" name="arrival-date" value="27 апреля 2020" placeholder="Укажите дату">
+              <p class="modal-form-field-info arrival-info">Мы не можем отправить вас в прошлое.</p>
+            </div>
+            <div class="modal-field-group">
+              <label class="modal-label" for="departure-date">Дата Выезда:</label>
+               <input class="modal-form-field field" type="text" id="departure-date" name="departure-date" value="1 сентября 2023" placeholder="Укажите дату">
+               <p class="modal-form-field-info departure-info">На эти даты есть свободные номера. Пока есть.</p>
+            </div>
+           <div class="field-guests">
+            <div class="modal-field-group-2">
+              <label class="modal-label" for="adults">Взрослые:</label>
+              <div class="modal-counter">
+                <button class="button-guest-min button-guest" type="button"><span class="visually-hidden">Уменьшить</span></button>
+                <input class="field counter-field" type="number" id="adults" name="adults" placeholder="1" value="2" required="">
+                <button class="button-guest-max button-guest" type="button"><span class="visually-hidden">Увеличить</span></button>
+              </div>
+            </div>
 
+            <div class="modal-field-group-2">
+              <span class="form-label form-label-icon">
+                <label class="modal-label form-label" for="children">Дети:</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                      <circle cx="13" cy="13" r="13" fill="#83B3D3"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" fill="white"/>
+                      </svg>
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                </span>
+              </span>
+              <div class="modal-counter">
+                <button class="button-guest-min button-guest" type="button"><span class="visually-hidden">Уменьшить</span></button>
+                <input class="field counter-field" type="number" id="children" name="children" placeholder="1" value="2" required="">
+                <button class="button-guest-max button-guest" type="button"><span class="visually-hidden">Увеличить</span></button>
+              </div>
+            </div>
+           </div>
             <a class="modal-button button button-light" href="#">Найти</a>
           </form>
         </section>
