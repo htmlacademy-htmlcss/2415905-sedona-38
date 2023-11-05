@@ -1422,9 +1422,25 @@ align-items: center;
   cursor: pointer;
 }
 
-.button-guest-min:hover {
+button:hover .button-guest::before,
+button:hover .button-guest::after {
   background-color: #000000;
 }
+
+button:focus .button-guest::before,
+button:focus .button-guest::after {
+  background-color: #000000;
+  border-radius: 4px;
+  box-shadow: 0 0 0 3px #82b3d3;
+}
+
+button:active .button-guest::before,
+button:active .button-guest::after {
+  background-color: #000000;
+  border-radius: 4px;
+  box-shadow: 0 0 0 3px #82b3d3;
+}
+
 
 .button-guest::before,
 .button-guest::after {
