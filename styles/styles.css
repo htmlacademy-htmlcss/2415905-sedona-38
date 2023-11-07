@@ -188,14 +188,14 @@ body {
 
 .field[type="number"] {
   -webkit-appearance: textfield;
-   -moz-appearance: textfield;
-   appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
  }
 
- .counter-field::-webkit-inner-spin-button,
- .counter-field::-webkit-outer-spin-button {
+.field[type="number"]::-webkit-inner-spin-button,
+.field[type="number"]::-webkit-outer-spin-button {
    -webkit-appearance: none;
-   appearance: none;
+           appearance: none;
  }
 
 .page-title {
@@ -851,7 +851,7 @@ opacity: 0.3;
   z-index: 2;
   width: 20px;
   height: 20px;
-  background: #ffffff;
+  background-color: #ffffff;
   border: none;
   border-radius: 5px;
   transform: translateY(-50%);
@@ -866,21 +866,17 @@ opacity: 0.3;
   right: 0;
 }
 
-.range-bar:hover .rrange-toggle-btn-min,
-.range-bar:hover .range-toggle-btn-max {
-  box-shadow: 0 0 10px 0 #83B3D3;
+.range-toggle-btn:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
-.range-toggle-btn:focus .range-toggle-btn-min,
-.range-bar:hover .range-toggle-btn-max {
+.range-toggle-btn:focus {
   outline: none;
-  box-shadow: 0 0 10px 0 #83B3D3;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25), 0 0 0 3px #83B3D3;
 }
 
-.range-toggle-btn:active .range-toggle-btn-min,
-.range-bar:hover .range-toggle-btn-max {
-  background-color: #68a2ca;
-  box-shadow: 0 0 10px 0 #83B3D3;
+.range-toggle-btn:active {
+  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.40), 0 0 0 2px #83B3D3;
 }
 
 .catalog {
@@ -1043,7 +1039,6 @@ pointer-events: none;
   line-height: 28px;
 }
 
-/*  */
 .product-card p {
   margin: 0;
 }
@@ -1243,21 +1238,21 @@ fill: #83B3D3;
   z-index: 4;
 }
 
-.modal {
-  position: relative;
-  margin: auto;
-  margin-top: 396px;
-  min-height: 576px;
-  padding: 64px 70px;
-  border-radius: 30px;
-  background: #FFF;
-  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
-
-}
-
 .modal-container-close {
   display: none;
 }
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 64px 70px;
+  border-radius: 30px;
+  background-color: #FFF;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+}
+
+
+
 .modal-search {
   width: 717px;
 }
@@ -1336,7 +1331,7 @@ align-items: center;
   width: 440px;
   padding: 12px 20px;
   border: 4px #F2F2F2;
-  font-family: "PT Sans";
+  font-family: "PT Sans" sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
