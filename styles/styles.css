@@ -1244,14 +1244,12 @@ fill: #83B3D3;
 
 .modal {
   position: relative;
-  margin: auto;
+  margin: 396px auto auto auto;
   padding: 64px 70px;
   border-radius: 30px;
   background-color: #FFF;
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
 }
-
-
 
 .modal-search {
   width: 717px;
@@ -1262,7 +1260,7 @@ fill: #83B3D3;
   position: absolute;
   padding: 0;
   top: 64px;
-  left: 613px;
+  right: 52px;
   width: 52px;
   height: 52px;
   background-color: #f2f2f2;
@@ -1271,10 +1269,7 @@ fill: #83B3D3;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
   cursor: pointer;
-
 }
 
 .modal-close-button svg {
@@ -1305,26 +1300,17 @@ fill: #83B3D3;
   margin: 0;
   margin-bottom: 64px;
   font-size: 30px;
-  font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
   color: #000;
 }
 
-
-
-.fotm {
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-  gap: 23px 80px;
-}
-
 .form-group-date {
-display: grid;
-grid-template-columns: 120px 1fr;
-gap: 0 15px;
-align-items: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+ gap: 0 15px;
+
 }
 
 .form-input {
@@ -1367,7 +1353,7 @@ align-items: center;
 }
 
 
-.counter-field  {
+.counter-input  {
   padding: 10px 40px;
   font-weight: 700;
   font-size: 18px;
@@ -1538,12 +1524,13 @@ align-items: center;
 }
 
 .modal-button {
+  flex-grow: 1;
   width: 577px;
   padding: 18px 77px;
   border-radius: 10px;
   margin-top: 20px;
   font-size: 20px;
-font-weight: 700;
-line-height: 24px;
-text-transform: uppercase;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
 }
