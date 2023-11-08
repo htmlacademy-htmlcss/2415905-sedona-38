@@ -59,72 +59,72 @@
     </footer>
    </div>
 
-  <!-- Класс modal-container-close закрывает модальное окно. -->
-  <div class="modal-container" data-test="modal">
-    <div class="modal modal-search">
-      <button class="modal-close-button" type="button">
-        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="15" height="15" viewBox="0 0 15 15">
-          <path d="M14.4905 1.78288L13.1982 0.49057L7.49048 6.19826L1.78279 0.49057L0.490479 1.78288L6.19817 7.49057L0.490479 13.1983L1.78279 14.4906L7.49048 8.78288L13.1982 14.4906L14.4905 13.1983L8.78279 7.49057L14.4905 1.78288Z" />
-          </svg>
-        <span class="visually-hidden">Закрыть.</span>
-      </button>
-      <section class="modal-content">
-        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-        <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
-          <div class="form-group-date">
-            <label class="form-label" for="arrival-date">Дата Заезда:</label>
-            <input class="form-input field" type="text" id="arrival-date" name="arrival-date" value="27 апреля 2020" placeholder="Укажите дату">
-            <p class="modal-info error-date">Мы не можем отправить вас в прошлое.</p>
+ <!-- Класс modal-container-close закрывает модальное окно. -->
+ <div class="modal-container">
+  <div class="modal modal-search">
+    <button class="modal-close-button" type="button">
+      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="15" height="15" viewBox="0 0 15 15">
+        <path d="M14.4905 1.78288L13.1982 0.49057L7.49048 6.19826L1.78279 0.49057L0.490479 1.78288L6.19817 7.49057L0.490479 13.1983L1.78279 14.4906L7.49048 8.78288L13.1982 14.4906L14.4905 13.1983L8.78279 7.49057L14.4905 1.78288Z" />
+        </svg>
+      <span class="visually-hidden">Закрыть.</span>
+    </button>
+    <section class="modal-content">
+      <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+      <form class="modal-form form" action="https://echo.htmlacademy.ru/" method="post">
+        <div class="form-group-date">
+          <label class="form-label" for="arrival-date">Дата Заезда:</label>
+          <input class="form-input field" type="text" id="arrival-date" name="arrival-date" value="27 апреля 2020" placeholder="Укажите дату" required>
+          <p class="modal-info error-date">Мы не можем отправить вас в прошлое.</p>
+        </div>
+        <div class="form-group-date">
+          <label class="form-label" for="departure-date">Дата Выезда:</label>
+           <input class="form-input field" type="text" id="departure-date" name="departure-date" value="1 сентября 2023" placeholder="Укажите дату" required>
+           <p class="modal-info">На эти даты есть свободные номера. Пока есть.</p>
+        </div>
+       <div class="group-guests">
+        <div class="form-group-guests">
+          <label class="form-label" for="adults">Взрослые:</label>
+          <div class="modal-counter">
+            <button class="button-guest-min button-guest" type="button">
+              <span class="visually-hidden">Уменьшить колличество гостей.</span>
+            </button>
+            <input class="field counter-input" type="number" id="adults" name="adults" placeholder="1" value="2" step="1" min="0" max="999" required>
+            <button class="button-guest-max button-guest" type="button">
+              <span class="visually-hidden">Увеличить колличество гостей.</span>
+            </button>
           </div>
-          <div class="form-group-date">
-            <label class="form-label" for="departure-date">Дата Выезда:</label>
-             <input class="form-input field" type="text" id="departure-date" name="departure-date" value="1 сентября 2023" placeholder="Укажите дату">
-             <p class="modal-info">На эти даты есть свободные номера. Пока есть.</p>
-          </div>
-         <div class="group-guests">
-          <div class="form-group-guests">
-            <label class="form-label" for="adults">Взрослые:</label>
-            <div class="modal-counter">
-              <button class="button-guest-min button-guest" type="button">
-                <span class="visually-hidden">Уменьшить.</span>
-              </button>
-              <input class="field counter-field" type="number" id="adults" name="adults" placeholder="1" value="2" step="1" min="0" max="999" required="">
-              <button class="button-guest-max button-guest" type="button">
-                <span class="visually-hidden">Увеличить.</span>
-              </button>
-            </div>
-          </div>
+        </div>
 
-          <div class="form-group-guests">
-            <div class="form-label form-label-icon">
-              <label class="form-label form-label" for="children">Дети:</label>
-              <span class="tooltip">
-                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
-                    <circle cx="13" cy="13" r="13" fill="#83B3D3"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" fill="white"/>
-                    </svg>
-                </button>
-                <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
-              </span>
-            </div>
-            <div class="modal-counter">
-              <button class="button-guest-min button-guest" type="button">
-                <span class="visually-hidden">Уменьшить</span>
+        <div class="form-group-guests">
+          <div class="form-label form-label-icon">
+            <label class="form-label form-label" for="children">Дети:</label>
+            <span class="tooltip">
+              <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                  <circle cx="13" cy="13" r="13" fill="#83B3D3"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" fill="white"/>
+                  </svg>
               </button>
-              <input class="field counter-field" type="number" id="children" name="children" placeholder="1" value="2" step="1" min="0" max="999" required="">
-              <button class="button-guest-max button-guest" type="button">
-                <span class="visually-hidden">Увеличить</span>
-              </button>
-            </div>
+              <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+            </span>
           </div>
-         </div>
-          <a class="modal-button button button-light" href="#">Найти</a>
-        </form>
-      </section>
-    </div>
-
+          <div class="modal-counter">
+            <button class="button-guest-min button-guest" type="button">
+              <span class="visually-hidden">Уменьшить колличество детей.</span>
+            </button>
+            <input class="field counter-input" type="number" id="children" name="children" placeholder="1" value="2" step="1" min="0" max="999" required>
+            <button class="button-guest-max button-guest" type="button">
+              <span class="visually-hidden">Увеличить колличество детей.</span>
+            </button>
+          </div>
+        </div>
+       </div>
+        <a class="modal-button button button-light" href="#">Найти</a>
+      </form>
+    </section>
   </div>
+
+</div>
 </body>
 
 </html>
