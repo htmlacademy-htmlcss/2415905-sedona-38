@@ -1194,7 +1194,6 @@ pointer-events: none;
 
 .product-card-title {
   margin: 0;
-
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -1282,7 +1281,6 @@ pointer-events: none;
   min-width: 60px;
   min-height: 60px;
   padding: 5px;
-
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
